@@ -36,7 +36,7 @@ const EditUser = (props) => {
         let isMounted = true;
 
         if (isMounted) {
-            axios.get(`http://localhost:5000/users/${uid}`)
+            axios.get(`/users/${uid}`)
                 .then(res => {
                     const response = res.data;
                     if (response) {
@@ -73,7 +73,7 @@ const EditUser = (props) => {
 
     const updateUser = () => {
 
-        axios.post(`http://localhost:5000/users/update/${uid}`, values)
+        axios.post(`/users/update/${uid}`, values)
             .then(res => {
                 console.log("User Update !!");
                 if (res) { history.push("/") }

@@ -14,7 +14,7 @@ const Users = () => {
         let isMounted = true;
 
         if (isMounted) {
-            axios.get("http://localhost:5000/users")
+            axios.get("/users")
                 .then(res => {
                     const response = res.data;
                     if (response) {
@@ -33,7 +33,7 @@ const Users = () => {
 
     const deleteUser = (uid) => {
 
-        axios.delete(`http://localhost:5000/users/delete/${uid}`)
+        axios.delete(`/users/delete/${uid}`)
             .then(res => {
                 console.log("User Deleted !!");
             })

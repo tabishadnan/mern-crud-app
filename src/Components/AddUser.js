@@ -33,7 +33,7 @@ const AddUser = (props) => {
       };
 
       const addUser = () => {
-        axios.post("http://localhost:5000/users/add", values)
+        axios.post("/users/add", values)
         .then(res => { 
             if (res) { history.push("/") }
         })

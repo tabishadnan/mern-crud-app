@@ -10,7 +10,7 @@ const DeleteUser = (props) => {
     const deleteUser = (evt) => {
         evt.preventDefault();
 
-        axios.delete(`http://localhost:5000/users/delete/${uid}`)
+        axios.delete(`/users/delete/${uid}`)
         .then(res => { 
             console.log("User Deleted !!");
             if(res){ history.push("/")}
