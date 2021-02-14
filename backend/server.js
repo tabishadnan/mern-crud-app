@@ -14,7 +14,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const port = process.env.PORT || 5000;
+const port = 5000;
 
 const usersRouter = require('./routes/users');
 app.use('/users', usersRouter);
